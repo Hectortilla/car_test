@@ -1,7 +1,7 @@
 <template>
     <section class="section wrapper">
         <div v-for="(question, i) in tests[testId].questions" :key="i" class="question-container">
-            <Card :image="question.img" :question="question.q_text" :answer="question.result_text"></Card>
+            <Card :image="question.img" :question="(i + 1) + ': ' + question.q_text" :answer="question.result_text"></Card>
         </div>
     </section>
 </template>
